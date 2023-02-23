@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: red;
+}
+
+header > ul {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.imgLogo {
+  width: 50px;
+}
+
+.imgBanner {
+  width: 150px;
+}
