@@ -3,7 +3,7 @@ import './Review.css';
 import React from 'react';
 
 const Review = () => {
-  return <div>Review</div>;
+  return <main>Review</main>;
 };
 
 export default Review;
