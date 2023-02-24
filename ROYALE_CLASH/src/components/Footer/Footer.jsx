@@ -19,7 +19,6 @@ const Footer = () => {
                 />
                 <div className="text-left ml-3">
                   {' '}
-              
                   <p className="text-xs text-gray-900">Download on </p>
                   <p className="text-sm md:text-base">
                     <a href="https://play.google.com/store/apps/details?id=com.supercell.clashroyale&hl=es&gl=US">

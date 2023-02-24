@@ -3,7 +3,8 @@ import './Gallery.css';
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 
-import getCharacter from '../../components/getCharacter/getCharacter';
+import GetCharacter from '../../components/getCharacter/getCharacter';
+import UserContext from '../../context/UserContext';
 import useDebounce from '../../hook/useDebonced';
 import MainGallery from '../../layouts/MainGallery';
 
@@ -44,7 +45,7 @@ const Gallery = () => {
       {debouncedValue ? (
         <MainGallery>
           {debouncedValue.map((character) => (
-            <getCharacter character={character} key={character.id} />
+            <GetCharacter character={character} key={character.id} />
           ))}
         </MainGallery>
       ) : (
