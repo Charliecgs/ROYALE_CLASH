@@ -12,7 +12,7 @@ const Gallery = () => {
   const { clash, setClash } = useContext(UserContext);
   const [filterClash, setFilterClash] = useState([]);
 
-  const debouncedValue = useDebounce(filterClash, 1000);
+  const debouncedValue = useDebounce(filterClash, 2000);
 
   const getClash = async () => {
     const res = await axios.get('https://63f74109e40e087c958aaa97.mockapi.io/items');
@@ -50,6 +50,12 @@ const Gallery = () => {
       ) : (
         <h1>Loading...</h1>
       )}
+      <div className="spinner">
+        <img
+          src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677260389/ClashRoyale/knightreduced_jgxrou.gif"
+          alt="loading spinner"
+        />
+      </div>
     </main>
   );
 };
