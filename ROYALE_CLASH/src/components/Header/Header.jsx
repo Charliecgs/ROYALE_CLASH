@@ -1,9 +1,13 @@
 import './Header.css';
 
 import React from 'react';
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import { UserContext } from '../../context/UserContext';
+
 const Header = () => {
+  const { user, logout } = useContext(UserContext);
   return (
     <header className="">
       <img
@@ -16,9 +20,7 @@ const Header = () => {
         {/* <li>
           <NavLink to="/">Home</NavLink>
         </li> */}
-        <li>
-          <NavLink to="/login">Login</NavLink>{' '}
-        </li>
+        <li>{user == null && <NavLink to="/login">Login</NavLink>}</li>
         <li>
           <NavLink to="/gallery">Gallery</NavLink>{' '}
         </li>{' '}
@@ -39,9 +41,14 @@ const Header = () => {
           <NavLink to="/review">Review</NavLink>{' '}
         </li>
         <li>
-          <button className="bg-blue-500 border border-blue-700 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-500 rounded">
-            Logout
-          </button>
+          {user !== null && (
+            <button
+              className="bg-blue-500 border border-blue-700 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-500 rounded"
+              onClick={() => logout()}
+            >
+              Logout
+            </button>
+          )}
         </li>
       </ul>
     </header>
