@@ -10,8 +10,7 @@ const Home = () => {
           <div className="description">
             <h1 className="borderWhite">CREA TU PROPIO MAZO</h1>
             <p className="borderWhite">
-              DESCUBRE NUESTRA PAGINA Y ENSEÑA A TUS AMIGOS LOS MEJORES MAZOS CREADOS Y
-              PARA CREAR
+              DESCUBRE NUESTRA PAGINA Y ENSEÑA A TUS AMIGOS LOS MEJORES MAZOS CREADOS
             </p>
             <button className="buttonMazo">Pulsa para crear mazo</button>
           </div>
