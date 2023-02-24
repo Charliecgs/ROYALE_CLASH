@@ -5,6 +5,9 @@
   justify-content: center;
   width: 200px;
   gap: 1rem;
+  background-image: url("https://res.cloudinary.com/dqoiir5ii/image/upload/v1677258776/ClashRoyale/3bec9a888fd77bb74349d7e6b02c32e8_p1ay6d.jpg");
+  padding: 12px;
+  border-radius: 12px;
 }
 
 .cr-figure img {
