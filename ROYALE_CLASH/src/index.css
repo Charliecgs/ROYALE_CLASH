@@ -32,3 +32,8 @@
 main {
   min-height: 80vh;
 }
+
+body {
+  background-image: url('https://res.cloudinary.com/dqoiir5ii/image/upload/v1677245557/ClashRoyale/wp2394904_jaz8cn.jpg');
+  background-size: cover;
+}
