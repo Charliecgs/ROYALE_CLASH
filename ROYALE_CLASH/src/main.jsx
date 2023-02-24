@@ -1,4 +1,5 @@
 import './index.css';
+import './assets/fonts/SVN-Supercell Magic.otf';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
