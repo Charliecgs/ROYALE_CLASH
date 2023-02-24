@@ -5,7 +5,7 @@ import React from 'react';
 const GetCharacter = ({ character }) => {
   return (
     <figure className="cr-figure">
-      <img src={character.img} alt={character.name} />
+      <img src={character.iconUrls.medium} alt={character.name} />
       <p>{character.name}</p>
     </figure>
   );

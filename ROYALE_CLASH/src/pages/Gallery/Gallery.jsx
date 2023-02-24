@@ -4,7 +4,7 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 
 import GetCharacter from '../../components/getCharacter/getCharacter';
-import UserContext from '../../context/UserContext';
+import { UserContext } from '../../context/UserContext';
 import useDebounce from '../../hook/useDebonced';
 import MainGallery from '../../layouts/MainGallery';
 
@@ -16,7 +16,7 @@ const Gallery = () => {
 
   const getClash = async () => {
     const res = await axios.get('https://63f74109e40e087c958aaa97.mockapi.io/items');
-    const data = res.data;
+    const data = res.data[0].items;
     setClash(data);
     setFilterClash(data);
   };
@@ -28,8 +28,7 @@ const Gallery = () => {
   const charactersFilter = (key) => {
     const filter = clash.filter(
       (item) =>
-        item.items.name.toLowerCase().includes(key.toLowerCase()) ||
-        item.items.elixir.includes(key),
+        item.name.toLowerCase().includes(key.toLowerCase()) || item.elixir.includes(key),
     );
     setFilterClash(filter);
   };
