@@ -24,11 +24,13 @@ const Header = () => {
         </li>{' '}
         <li>
           {' '}
-          <NavLink to="/"><img
-            className="imgBanner"
-            src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677170946/ClashRoyale/clashrecortado_dxogp6.png"
-            alt="Clash Royale"
-          /></NavLink>
+          <NavLink to="/">
+            <img
+              className="imgBanner"
+              src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677170946/ClashRoyale/clashrecortado_dxogp6.png"
+              alt="Clash Royale"
+            />
+          </NavLink>
         </li>
         <li>
           <NavLink to="/deck">Deck</NavLink>{' '}

@@ -14,10 +14,8 @@ header > ul {
 }
 
 a:active {
-
   text-decoration: underline blue;
 }
-
 
 .imgLogo {
   height: 100%;

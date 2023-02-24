@@ -2,7 +2,7 @@ import './getCharacter.css';
 
 import React from 'react';
 
-const getCharacter = ({ character }) => {
+const GetCharacter = ({ character }) => {
   return (
     <figure className="cr-figure">
       <img src={character.img} alt={character.name} />
@@ -11,4 +11,4 @@ const getCharacter = ({ character }) => {
   );
 };
 
-export default getCharacter;
+export default GetCharacter;
