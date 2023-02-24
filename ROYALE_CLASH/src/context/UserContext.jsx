@@ -7,7 +7,7 @@ export const UserContext = createContext();
 //2º CREAR PROVEEDOR CON LA INFORMACION DENTRO
 export const UserContextProvider = ({ children }) => {
   const navigate = useNavigate();
-
+  const [clash, setClash] = useState([]);
   const [user, setUser] = useState(() => {
     if (localStorage.getItem('user')) {
       return localStorage.getItem('user');
@@ -33,7 +33,9 @@ export const UserContextProvider = ({ children }) => {
 
   //3º RETORNAR LA ETIQUETA WRAPEADORA CON LOS VALUE A COMPARTIR EN LA APLICACION
   return (
-    <UserContext.Provider value={{ user, setUser, logout, pass, setPass }}>
+    <UserContext.Provider
+      value={{ user, setUser, logout, pass, setPass, clash, setClash }}
+    >
       {children}
     </UserContext.Provider>
   );
