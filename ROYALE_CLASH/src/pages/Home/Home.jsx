@@ -4,7 +4,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <main>
+    <main className="main-home">
       <div className="container">
         <div className="red">
           <div className="description">

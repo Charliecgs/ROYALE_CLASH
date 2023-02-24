@@ -17,9 +17,11 @@
 .container {
   display: flex;
   padding: 10px;
-  background-color: #bed7ff53;
-  border-radius: 12px;
   color: white;
+}
+
+.main-home{
+  background-color: #bed7ff53;
 }
 
 .imgMovile {
