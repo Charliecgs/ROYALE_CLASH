@@ -11,7 +11,6 @@ import Gallery from './pages/Gallery/Gallery';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Review from './pages/Review/Review';
-
 function App() {
   return (
     <BaseLayout>
