@@ -1,14 +1,15 @@
 .cr-figure {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 200px;
   gap: 1rem;
+
 }
 
 .cr-figure img {
   width: 100%;
-  margin-top: 3rem;
-  border-radius: 0.7rem;
-  border: 2px solid var(--dark-blue);
+  height: 100%;
 }
+
