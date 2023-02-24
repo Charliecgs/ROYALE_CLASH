@@ -14,9 +14,9 @@ header > ul {
 }
 
 .imgLogo {
-  width: 50px;
+  height: 100%;
 }
 
 .imgBanner {
-  width: 150px;
+  height: 100%;
 }
