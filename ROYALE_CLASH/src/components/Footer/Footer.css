@@ -1,3 +1,9 @@
-footer {
-  background-color: blue;
+.bgcolor {
+  background-color: #4549a8;
+}
+
+h3,
+h4 {
+  color: white;
+  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
 }

@@ -1,8 +1,8 @@
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  background-color: red;
+  background-color: #488bf4;
 }
 
 header > ul {
@@ -12,6 +12,12 @@ header > ul {
   align-items: center;
   text-transform: uppercase;
 }
+
+a:active {
+
+  text-decoration: underline blue;
+}
+
 
 .imgLogo {
   width: 50px;
