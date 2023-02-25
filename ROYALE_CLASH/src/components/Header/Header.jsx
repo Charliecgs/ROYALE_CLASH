@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="">
       <img
-        className="imgLogo"
+        className="imgLogo p-3"
         src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677169745/ClashRoyale/clash-royale-png-46155_fweugv.png"
         alt="Crown logo"
       />
@@ -22,7 +22,7 @@ const Header = () => {
         </li> */}
         <li>{user == null && <NavLink to="/login">Login</NavLink>}</li>
         <li>
-          <NavLink to="/gallery">Gallery</NavLink>{' '}
+          <NavLink to="/gallery">CARTAS</NavLink>{' '}
         </li>{' '}
         <li>
           {' '}
@@ -35,10 +35,10 @@ const Header = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/deck">Deck</NavLink>{' '}
+          <NavLink to="/deck">MAZOS</NavLink>{' '}
         </li>
         <li>
-          <NavLink to="/review">Review</NavLink>{' '}
+          <NavLink to="/review">Reviews</NavLink>{' '}
         </li>
         <li>
           {user !== null && (
