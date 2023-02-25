@@ -7,7 +7,7 @@
   gap: 5rem;
 }
 
-.all-decks > button {
+.all-decks > a > button {
   border: solid black 2px;
   padding: 20px;
   width: 150px;
