@@ -7,7 +7,7 @@
   gap: 5rem;
 }
 
-.all-decks > button{
+.all-decks > button {
   border: solid black 2px;
   padding: 20px;
   width: 150px;
@@ -16,13 +16,12 @@
 }
 
 .all-cards {
-  
   width: 100%;
- margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .decks {
-  background-image: url("https://res.cloudinary.com/dqoiir5ii/image/upload/v1677324626/ClashRoyale/360_F_257717689_dOEzjdOvMhY2lZbsWM1eVGum8v7yTBWx_o4vgl6.png");
+  background-image: url('https://res.cloudinary.com/dqoiir5ii/image/upload/v1677324626/ClashRoyale/360_F_257717689_dOEzjdOvMhY2lZbsWM1eVGum8v7yTBWx_o4vgl6.png');
   object-fit: cover;
   background-size: 100%;
   width: 100%;
@@ -37,16 +36,16 @@
 .btn {
   border: 2px solid black;
   border-radius: 8px;
-  padding:7px;
+  padding: 7px;
 }
 
 .btn1 {
   border: 2px solid black;
   border-radius: 8px;
-  padding:1px;
+  padding: 1px;
 }
 
-.cr-figureDeck{
+.cr-figureDeck {
   width: 130px;
   height: 300px;
   padding: 12px;
@@ -58,7 +57,7 @@
   gap: 4px;
   flex-wrap: wrap;
   text-align: center;
-  background-image: url("https://res.cloudinary.com/dqoiir5ii/image/upload/v1677258776/ClashRoyale/3bec9a888fd77bb74349d7e6b02c32e8_p1ay6d.jpg");
+  background-image: url('https://res.cloudinary.com/dqoiir5ii/image/upload/v1677258776/ClashRoyale/3bec9a888fd77bb74349d7e6b02c32e8_p1ay6d.jpg');
   color: white;
   font-size: 14px;
   text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;

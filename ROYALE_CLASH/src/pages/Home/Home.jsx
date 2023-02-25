@@ -1,8 +1,10 @@
 import './Home.css';
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <main className="main-home">
       <div className="container">
@@ -12,7 +14,10 @@ const Home = () => {
             <p className="borderWhite">
               ¡PUNTUA Y COMPARTE CON TUS AMIGOS LOS MEJORES MAZOS!
             </p>
-            <button className="bg-indigo-500 border border-indigo-700 hover:bg-indigo-400 text-white font-bold py-3 px-6 border-b-4 border-blue-900 hover:border-indigo-500 rounded">
+            <button
+              className="bg-indigo-500 border border-indigo-700 hover:bg-indigo-400 text-white font-bold py-3 px-6 border-b-4 border-blue-900 hover:border-indigo-500 rounded"
+              onClick={() => navigate('/deck')}
+            >
               {' '}
               CREA TU MAZO{' '}
             </button>
