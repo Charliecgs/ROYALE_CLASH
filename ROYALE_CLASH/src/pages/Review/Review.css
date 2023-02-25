@@ -1,0 +1,27 @@
+.formularioReview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+    border: 1px solid var(--primray-red);
+    height: 300px;
+    width: 400px;
+    border-radius: 5%;
+    background-color: var(--primary-color);
+    padding-top: 2rems;
+}
+.main-review{
+    display: flex;
+    justify-content: center;
+    
+}
+.inputreview{
+    height: 300px;
+    height: 100px;
+   overflow: scroll;
+    
+}
+.listacomentarios{
+    background-color: black;
+}
