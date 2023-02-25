@@ -10,6 +10,12 @@ const Deck = () => {
   const [filterClash, setFilterClash] = useState([]);
   const [royal, setRoyal] = useState([]);
   const [loaded, setLoaded] = useState(false);
+  const [card, setCard] = useState({
+    img: '',
+    name: '',
+    elixir: '',
+  });
+  const [error, setError] = useState(null);
 
   const debouncedValue = useDebounce(filterClash, 1000);
 
@@ -31,6 +37,24 @@ const Deck = () => {
         item.name.toLowerCase().includes(key.toLowerCase()) || item.elixir.includes(key),
     );
     setFilterClash(filter);
+  };
+
+  const createMovie = (ev) => {
+    ev.preventDefault();
+    if (!card.img || !card.name || !card.elixir) {
+      setError('Formulario incompleto');
+    } else {
+      setError(null);
+      fetch('https://63f34c53864fb1d60013d215.mockapi.io/movies', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(card),
+      }).then((res) => {
+        getMovies();
+      });
+    }
   };
 
   return (
