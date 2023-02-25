@@ -14,18 +14,15 @@ header > ul {
   text-transform: uppercase;
 }
 
-a {
+header > ul >li > a {
   position: relative;
   color: black;
   text-decoration: none;
 }
 
-a:hover,
-active {
-  color: var(--primray-red);
-}
 
-a::before {
+
+header > ul >li > a::before{
   content: '';
   position: absolute;
   display: block;
@@ -33,12 +30,12 @@ a::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--primray-red);
+  background-color: black;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
 
-a:hover::before {
+header > ul >li > a:hover::before {
   transform: scaleX(1);
 }
 
@@ -53,7 +50,7 @@ a:hover::before {
 }
 
 .header-dark {
-  background-color: red;
+  background-color:var(--primray-red);
 }
 
 .header-light {

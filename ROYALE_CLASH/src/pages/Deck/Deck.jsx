@@ -67,7 +67,7 @@ const Deck = () => {
     <main>
       <div className="deck-container>">
         <div className="all-decks">
-          <NavLink to={'/deck'}>
+          <NavLink to={'/deck'} className="deck1">
             <button id="buttonOne" className="button1 bg-red-500">
               Mazo 1
             </button>

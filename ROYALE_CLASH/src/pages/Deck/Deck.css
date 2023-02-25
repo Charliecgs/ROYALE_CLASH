@@ -47,10 +47,21 @@
   padding: 7px;
 }
 
+.btn:hover {
+  color:var(--primray-red);
+  scale:1.1;
+}
+
+
 .btn1 {
   border: 2px solid black;
   border-radius: 8px;
   padding: 1px;
+}
+
+.btn1:hover {
+  color:var(--primray-red);
+  scale:1.1;
 }
 
 .cr-figureDeck {
