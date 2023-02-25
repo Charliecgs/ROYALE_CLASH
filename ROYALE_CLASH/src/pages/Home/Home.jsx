@@ -10,7 +10,7 @@ const Home = () => {
           <div className="description">
             <h1 className="borderWhite text-xl">¡CREA TU PROPIO MAZO DE CLASH ROYALE!</h1>
             <p className="borderWhite">
-              PUNTUA Y COMPARTE CON TUS AMIGOS LOS MEJORES MAZOS
+              ¡PUNTUA Y COMPARTE CON TUS AMIGOS LOS MEJORES MAZOS!
             </p>
             <button className="bg-indigo-500 border border-indigo-700 hover:bg-indigo-400 text-white font-bold py-3 px-6 border-b-4 border-blue-900 hover:border-indigo-500 rounded">
               {' '}
