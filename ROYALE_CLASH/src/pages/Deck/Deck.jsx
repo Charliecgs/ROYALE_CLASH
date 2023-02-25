@@ -1,18 +1,30 @@
 import './Deck.css';
 
-import React, { useContext, useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
-import { UserContext } from '../../context/UserContext';
 import useDebounce from '../../hook/useDebonced';
+import MainGallery from '../../layouts/MainGallery';
 
 const Deck = () => {
-  const { clash } = useContext(UserContext);
   const [filterClash, setFilterClash] = useState([]);
+  const [royal, setRoyal] = useState([]);
 
-  const debouncedValue = useDebounce(filterClash, 2000);
+  const debouncedValue = useDebounce(filterClash, 500);
+
+  const getClash = async () => {
+    const res = await axios.get('https://63f74109e40e087c958aaa97.mockapi.io/items');
+    const data = res.data[0].items;
+    setRoyal(data);
+    setFilterClash(data);
+  };
+
+  useEffect(() => {
+    getClash();
+  }, []);
 
   const charactersFilter = (key) => {
-    const filter = clash.filter(
+    const filter = royal.filter(
       (item) =>
         item.name.toLowerCase().includes(key.toLowerCase()) || item.elixir.includes(key),
     );
@@ -41,24 +53,20 @@ const Deck = () => {
             />
           </div>
           {debouncedValue ? (
-            debouncedValue.map((character) => (
-              <figure className="cr-figure" key={character.id}>
-                <img src={character.iconUrls.medium} alt={character.name} />
-                <p className="cr-p1">{character.name}</p>
-                <p className="cr-p2">Level {JSON.stringify(character.maxLevel)}</p>
-                <p className="cr-p3">Elixir cost {character.elixir}</p>
-                <button>añadir</button>
-              </figure>
-            ))
+            <MainGallery>
+              {debouncedValue.map((character) => (
+                <figure className="cr-figure" key={character.id}>
+                  <img src={character.iconUrls.medium} alt={character.name} />
+                  <p className="cr-p1">{character.name}</p>
+                  <p className="cr-p2">Level {JSON.stringify(character.maxLevel)}</p>
+                  <p className="cr-p3">Elixir cost {character.elixir}</p>
+                  <button className="btn">añadir</button>
+                </figure>
+              ))}
+            </MainGallery>
           ) : (
             <h1>Loading...</h1>
           )}
-          <div className="spinner">
-            <img
-              src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677260389/ClashRoyale/knightreduced_jgxrou.gif"
-              alt="loading spinner"
-            />
-          </div>
         </div>
       </div>
     </main>
