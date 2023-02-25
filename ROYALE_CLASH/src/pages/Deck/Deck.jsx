@@ -9,14 +9,16 @@ import MainGallery from '../../layouts/MainGallery';
 const Deck = () => {
   const [filterClash, setFilterClash] = useState([]);
   const [royal, setRoyal] = useState([]);
+  const [loaded, setLoaded] = useState(false);
 
-  const debouncedValue = useDebounce(filterClash, 500);
+  const debouncedValue = useDebounce(filterClash, 1000);
 
   const getClash = async () => {
     const res = await axios.get('https://63f74109e40e087c958aaa97.mockapi.io/items');
     const data = res.data[0].items;
     setRoyal(data);
     setFilterClash(data);
+    setLoaded(true);
   };
 
   useEffect(() => {
@@ -52,7 +54,7 @@ const Deck = () => {
               onChange={(ev) => charactersFilter(ev.target.value)}
             />
           </div>
-          {debouncedValue ? (
+          {loaded ? (
             <MainGallery>
               {debouncedValue.map((character) => (
                 <figure className="cr-figure" key={character.id}>
@@ -65,7 +67,12 @@ const Deck = () => {
               ))}
             </MainGallery>
           ) : (
-            <h1>Loading...</h1>
+            <div className="spinner">
+              <img
+                src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677260389/ClashRoyale/knightreduced_jgxrou.gif"
+                alt="loading spinner"
+              />
+            </div>
           )}
         </div>
       </div>
