@@ -1,0 +1,17 @@
+.all-decks {
+  background-color: red;
+  width: 100%;
+  height: 100px;
+}
+
+.all-cards {
+  background-color: blue;
+  width: 100%;
+  height: 700px;
+}
+
+.decks {
+  background-color: green;
+  width: 100%;
+  height: 400px;
+}
