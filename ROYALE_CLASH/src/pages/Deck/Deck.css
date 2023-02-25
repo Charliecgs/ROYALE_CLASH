@@ -7,12 +7,20 @@
   gap: 5rem;
 }
 
+#buttonOne {
+  background-color: var(--primray-red);
+}
+
 .all-decks > button {
   border: solid black 2px;
   padding: 20px;
   width: 150px;
   background-color: var(--light-blue);
   border-radius: 12px;
+}
+
+.button1 {
+  background-color: red;
 }
 
 .all-cards {

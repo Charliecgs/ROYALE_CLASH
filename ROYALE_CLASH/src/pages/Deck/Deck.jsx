@@ -3,6 +3,7 @@ import './Deck.css';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 import useDebounce from '../../hook/useDebonced';
 import MainGallery from '../../layouts/MainGallery';
@@ -40,6 +41,23 @@ const Deck = () => {
     console.log(res);
   };
 
+  const upgrade = () => {
+    Swal.fire({
+      title: '¡Consigue premium!',
+      text: 'Suscríbete a RoyaleClash Premium© por solo 9$ al mes, para conseguir: Mazos ilimitados, acceso a mazos ProPlayer +3000 trofeos, ¡y mucho mas! ',
+      width: 600,
+      padding: '0rem',
+      color: '#000000',
+      background: '#fff',
+      backdrop: `
+        rgba(0,0,123,0.4)
+        url("https://res.cloudinary.com/dqkcdzt1m/image/upload/v1677344711/kingreduced_l5w3yi.gif")
+        left top
+        no-repeat
+      `,
+    });
+  };
+
   useEffect(() => {
     getClash();
     getDeck();
@@ -50,15 +68,17 @@ const Deck = () => {
       <div className="deck-container>">
         <div className="all-decks">
           <NavLink to={'/deck'}>
-            <button>1</button>
+            <button id="buttonOne" className="button1 bg-red-500">
+              Mazo 1
+            </button>
           </NavLink>
           <NavLink to={'/deck2'}>
-            <button>2</button>
+            <button>Mazo 2</button>
           </NavLink>
           <NavLink to={'/deck3'}>
-            <button>3</button>
+            <button>Mazo 3</button>
           </NavLink>
-          <button>+</button>
+          <button onClick={upgrade}>¡Mazos extra!</button>
         </div>
         <div className="decks">
           {loaded2 ? (
@@ -125,7 +145,13 @@ const Deck = () => {
                               }).then(() => {
                                 getDeck();
                               })
-                            : alert('Has alcanzado el maximo de cartas');
+                            : Swal.fire({
+                                icon: 'error',
+                                title: 'Máximo alcanzado',
+                                text: 'El máximo de cartas por mazo es 8. Por favor, borra alguna para poder añadir nuevas.',
+                                timer: 4500,
+                                timerProgressBar: true,
+                              });
                         }
                       }}
                     >
