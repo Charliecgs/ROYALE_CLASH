@@ -7,6 +7,10 @@
   gap: 5rem;
 }
 
+#buttonTwo {
+  background-color: var(--primray-red);
+}
+
 .all-decks > a > button {
   border: solid black 2px;
   padding: 20px;
