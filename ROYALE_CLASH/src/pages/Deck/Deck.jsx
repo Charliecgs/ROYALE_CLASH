@@ -10,12 +10,8 @@ const Deck = () => {
   const [filterClash, setFilterClash] = useState([]);
   const [royal, setRoyal] = useState([]);
   const [loaded, setLoaded] = useState(false);
-  const [card, setCard] = useState({
-    img: '',
-    name: '',
-    elixir: '',
-  });
-  const [error, setError] = useState(null);
+  const [loaded2, setLoaded2] = useState(false);
+  const [deck, setDeck] = useState([]);
 
   const debouncedValue = useDebounce(filterClash, 1000);
 
@@ -27,10 +23,6 @@ const Deck = () => {
     setLoaded(true);
   };
 
-  useEffect(() => {
-    getClash();
-  }, []);
-
   const charactersFilter = (key) => {
     const filter = royal.filter(
       (item) =>
@@ -39,23 +31,18 @@ const Deck = () => {
     setFilterClash(filter);
   };
 
-  const createMovie = (ev) => {
-    ev.preventDefault();
-    if (!card.img || !card.name || !card.elixir) {
-      setError('Formulario incompleto');
-    } else {
-      setError(null);
-      fetch('https://63f34c53864fb1d60013d215.mockapi.io/movies', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(card),
-      }).then((res) => {
-        getMovies();
-      });
-    }
+  const getDeck = async () => {
+    const res = await axios.get('https://63ee4213d466e0c18bac9016.mockapi.io/deck');
+    const data = res.data;
+    setDeck(data);
+    setLoaded2(true);
+    console.log(res);
   };
+
+  useEffect(() => {
+    getClash();
+    getDeck();
+  }, []);
 
   return (
     <main>
@@ -64,11 +51,38 @@ const Deck = () => {
           <button>1</button>
           <button>2</button>
           <button>3</button>
-          <button>4</button>
-          <button>5</button>
           <button>+</button>
         </div>
-        <div className="decks"></div>
+        <div className="decks">
+          {loaded2 ? (
+            deck.map((item) => (
+              <figure className="cr-figureDeck" key={item.id}>
+                <img src={item.iconUrls.medium} alt={item.name} />
+                <p className="cr-p1">{item.name}</p>
+                <p className="cr-p2">Level {JSON.stringify(item.maxLevel)}</p>
+                <p className="cr-p3">Elixir cost {item.elixir}</p>
+                <button
+                  className="btn1"
+                  onClick={(ev) => {
+                    ev.target.disabled = false;
+                    fetch(`https://63ee4213d466e0c18bac9016.mockapi.io/deck/${item.id}`, {
+                      method: 'DELETE',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                    }).then(() => {
+                      getDeck();
+                    });
+                  }}
+                >
+                  Eliminar
+                </button>
+              </figure>
+            ))
+          ) : (
+            <h1>hola</h1>
+          )}
+        </div>
         <div className="all-cards">
           {' '}
           <div className="cl-input">
@@ -86,7 +100,28 @@ const Deck = () => {
                   <p className="cr-p1">{character.name}</p>
                   <p className="cr-p2">Level {JSON.stringify(character.maxLevel)}</p>
                   <p className="cr-p3">Elixir cost {character.elixir}</p>
-                  <button className="btn">añadir</button>
+                  {deck.filter((item) => item.name === character.name).length == 0 && (
+                    <button
+                      className="btn"
+                      onClick={() => {
+                        {
+                          deck.length < 8
+                            ? fetch('https://63ee4213d466e0c18bac9016.mockapi.io/deck', {
+                                method: 'POST',
+                                headers: {
+                                  'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(character),
+                              }).then(() => {
+                                getDeck();
+                              })
+                            : alert('Has alcanzado el maximo de cartas');
+                        }
+                      }}
+                    >
+                      Añadir
+                    </button>
+                  )}
                 </figure>
               ))}
             </MainGallery>
