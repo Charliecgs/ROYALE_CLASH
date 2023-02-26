@@ -42,29 +42,25 @@ const Home = () => {
           <div className="tutorial">
             <div className="tutorial1">
               <img
-                src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677246882/ClashRoyale/Mazos_czajbv.jpg"
+                src="https://res.cloudinary.com/dqkcdzt1m/image/upload/v1677426333/lava-loon-deck_d8j4m4.webp"
                 alt="tutorial 1"
               />
-              <p className="borderWhite">
-                Paso 1: Pulsar crear mazo para ir a creaciones
-              </p>
+              <p className="borderWhite">Paso 1: Elige el mazo que deseas editar</p>
             </div>
             <div className="tutorial1">
               <img
-                src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677246882/ClashRoyale/Mazos_czajbv.jpg"
+                src="https://res.cloudinary.com/dqkcdzt1m/image/upload/v1677427636/decklist_ae4dm0.jpg"
                 alt="tutorial 1"
               />
-              <p className="borderWhite">
-                Paso 2: Seleccionar las cartas que quieras para tu mazo
-              </p>
+              <p className="borderWhite">Paso 2: Selecciona las mejores cartas</p>
             </div>
             <div className="tutorial1">
               <img
-                src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677246882/ClashRoyale/Mazos_czajbv.jpg"
+                src="https://res.cloudinary.com/dqkcdzt1m/image/upload/v1677426332/the-best-clash-royale-deck_uq55ow.webp"
                 alt="tutorial 1"
               />
               <p className="borderWhite">
-                Paso 3: Guardar y seguir creando mazos para competir{' '}
+                Paso 3: ¡Comparte el mazo y compite con tus amigos!
               </p>
             </div>
           </div>
