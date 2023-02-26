@@ -118,11 +118,11 @@ const Deck = () => {
           <div className="cl-input">
             <input
               type="text"
-              placeholder="Search..."
+              placeholder="Search Name / Cost"
               onChange={(ev) => charactersFilter(ev.target.value)}
             />
           </div>
-          {loaded ? (
+          {loaded && filterClash.length ? (
             <MainGallery>
               {debouncedValue.map((character) => (
                 <figure className="cr-figure" key={character.id}>
@@ -163,10 +163,7 @@ const Deck = () => {
             </MainGallery>
           ) : (
             <div className="spinner">
-              <img
-                src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677260389/ClashRoyale/knightreduced_jgxrou.gif"
-                alt="loading spinner"
-              />
+              <h3>No hay personajes que coincidan con la busqueda</h3>
             </div>
           )}
         </div>
