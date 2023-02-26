@@ -81,16 +81,46 @@ const Review = () => {
           placeholder="Deja tu comentario"
           maxLength={30}
           className="inputreview"
+          style={
+            localStorage.getItem('theme') == 'header-dark'
+              ? {
+                  backgroundColor: 'white',
+                  color: 'black',
+                }
+              : {
+                  backgroundColor: 'white',
+                  color: 'black',
+                }
+          }
         />
         <div className="filaval">
           {' '}
           <h1>Valora de 1 a 10 </h1>
-          <input type={'number'} min={1} max={10} ref={inputVal} />
+          <input
+            type={'number'}
+            min={1}
+            max={10}
+            ref={inputVal}
+            style={
+              localStorage.getItem('theme') == 'header-dark'
+                ? {
+                    backgroundColor: 'white',
+                    color: 'black',
+                  }
+                : {
+                    backgroundColor: 'white',
+                    color: 'black',
+                  }
+            }
+          />
         </div>
         <button
           className="bg-blue-500 border border-blue-700 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-900 hover:border-blue-500 rounded"
           onClick={() => {
-            if (inputRev.current.value !== '' || inputVal.current.value !== null) {
+            if (
+              inputRev.current.value !== '' ||
+              (inputVal.current.value > 1 && inputVal.current.value < 11)
+            ) {
               comentario = inputRev.current.value;
               valoracion = inputVal.current.value;
               reviewss.push({
