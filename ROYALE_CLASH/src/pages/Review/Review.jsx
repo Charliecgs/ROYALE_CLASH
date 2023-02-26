@@ -2,6 +2,7 @@ import './Review.css';
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useContext } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { useNavigate } from 'react-router-dom';
 
 import GetReviews from '../../components/getReviews/getReviews';
@@ -73,12 +74,17 @@ const Review = () => {
               }
         }
       >
-        <h1>Hola {user}</h1>
-        <h1>Dejanos tu comentario!!!</h1>
+        <h1>
+          {' '}
+          <FormattedMessage id="review.1" /> {user}
+        </h1>
+        <h1>
+          <FormattedMessage id="review.2" />
+        </h1>
         <input
           type="text"
           ref={inputRev}
-          placeholder="Deja tu comentario"
+          placeholder="Leave your comment"
           maxLength={30}
           className="inputreview"
           style={
@@ -95,7 +101,9 @@ const Review = () => {
         />
         <div className="filaval">
           {' '}
-          <h1>Valora de 1 a 10 </h1>
+          <h1>
+            <FormattedMessage id="review.3" />
+          </h1>
           <input
             type={'number'}
             min={1}
@@ -130,14 +138,13 @@ const Review = () => {
               });
               setReviews(reviewss);
             }
-            console.log(reviewss);
+
             navigate('/review');
           }}
         >
-          Enviar
+          <FormattedMessage id="review.4" />
         </button>
       </div>
-
       <div className="listacomentarios">
         {reviews.map((review) => (
           <GetReviews review={review} key={review.usuario} />

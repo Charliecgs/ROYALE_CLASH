@@ -38,9 +38,8 @@
   color: white;
 }
 
-
 @media (max-width: 644px) {
-  main{
+  main {
     width: 100vw;
   }
 }

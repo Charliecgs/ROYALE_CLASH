@@ -1,5 +1,6 @@
 import './App.css';
 
+import { FormattedDate, FormattedMessage } from 'react-intl';
 import { Route, Routes } from 'react-router-dom';
 
 import Footer from './components/Footer/Footer';

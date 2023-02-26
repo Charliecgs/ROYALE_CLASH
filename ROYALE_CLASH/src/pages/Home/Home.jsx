@@ -2,8 +2,10 @@ import './Home.css';
 
 import { useContext } from 'react';
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { useNavigate } from 'react-router-dom';
 
+import SelectLanguages from '../../components/SelectLanguages/SelectLanguages';
 import { UserContext } from '../../context/UserContext';
 
 const Home = () => {
@@ -11,12 +13,16 @@ const Home = () => {
   const { toggleTheme } = useContext(UserContext);
   return (
     <main className="main-home">
+      <SelectLanguages />
       <div className="container">
         <div className="red">
           <div className="description">
-            <h1 className="borderWhite text-xl">¡CREA TU PROPIO MAZO DE CLASH ROYALE!</h1>
+            <h1 className="borderWhite text-xl">
+              {' '}
+              <FormattedMessage id="home.1" />
+            </h1>
             <p className="borderWhite">
-              ¡PUNTUA Y COMPARTE CON TUS AMIGOS LOS MEJORES MAZOS!
+              <FormattedMessage id="home.2" />
             </p>
             <button
               className="bn54"
@@ -35,7 +41,10 @@ const Home = () => {
                     }
               }
             >
-              <span className="bn54span">CREA TU MAZO</span>{' '}
+              <span className="bn54span">
+                {' '}
+                <FormattedMessage id="home.3" />
+              </span>{' '}
             </button>
           </div>
 
@@ -45,14 +54,18 @@ const Home = () => {
                 src="https://res.cloudinary.com/dqkcdzt1m/image/upload/v1677426333/lava-loon-deck_d8j4m4.webp"
                 alt="tutorial 1"
               />
-              <p className="borderWhite">Paso 1: Elige el mazo que deseas editar</p>
+              <p className="borderWhite">
+                <FormattedMessage id="home.4" />
+              </p>
             </div>
             <div className="tutorial1">
               <img
                 src="https://res.cloudinary.com/dqkcdzt1m/image/upload/v1677427636/decklist_ae4dm0.jpg"
                 alt="tutorial 1"
               />
-              <p className="borderWhite">Paso 2: Selecciona las mejores cartas</p>
+              <p className="borderWhite">
+                <FormattedMessage id="home.5" />
+              </p>
             </div>
             <div className="tutorial1">
               <img
@@ -60,7 +73,7 @@ const Home = () => {
                 alt="tutorial 1"
               />
               <p className="borderWhite">
-                Paso 3: ¡Comparte el mazo y compite con tus amigos!
+                <FormattedMessage id="home.6" />
               </p>
             </div>
           </div>
