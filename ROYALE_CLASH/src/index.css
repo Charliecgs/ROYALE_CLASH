@@ -38,3 +38,10 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
+.select {
+  border:2px solid black;
+  border-radius: 12px;
+  background-color: #FB9A00;
+  color:white;
+}

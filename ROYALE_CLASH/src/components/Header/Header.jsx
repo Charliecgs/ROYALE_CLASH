@@ -1,8 +1,9 @@
 import './Header.css';
-import "../../pages/Deck2/Deck2.css";
+import '../../pages/Deck2/Deck2.css';
 
 import React from 'react';
 import { useContext } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { NavLink } from 'react-router-dom';
 
 import { UserContext } from '../../context/UserContext';
@@ -28,13 +29,17 @@ const Header = () => {
       </NavLink>
       <ul>
         <li>
-          <NavLink to="/gallery">CARTAS</NavLink>{' '}
+          <NavLink to="/gallery">
+            <FormattedMessage id="header.1" />
+          </NavLink>{' '}
         </li>{' '}
         <li>
-          <NavLink to="/deck">MAZOS</NavLink>{' '}
+          <NavLink to="/deck">
+            <FormattedMessage id="header.2" />{' '}
+          </NavLink>{' '}
         </li>
         <li>
-          <NavLink to="/review">Reviews</NavLink>{' '}
+          <NavLink to="/review">REVIEWS</NavLink>{' '}
         </li>
         <li>
           {user !== null && (
@@ -66,13 +71,18 @@ const Header = () => {
       </NavLink>
       <ul>
         <li>
-          <NavLink to="/gallery">CARTAS</NavLink>{' '}
+          <NavLink to="/gallery">
+            {' '}
+            <FormattedMessage id="header.1" />
+          </NavLink>{' '}
         </li>{' '}
-        <li className='headerMazos'>
-          <NavLink to="/deck">MAZOS</NavLink>{' '}
+        <li className="headerMazos">
+          <NavLink to="/deck">
+            <FormattedMessage id="header.2" />
+          </NavLink>{' '}
         </li>
         <li>
-          <NavLink to="/review">Reviews</NavLink>{' '}
+          <NavLink to="/review">REVIEWS</NavLink>{' '}
         </li>
         <li>
           {user !== null && (

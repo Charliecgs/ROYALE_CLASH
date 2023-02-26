@@ -154,7 +154,6 @@
 }
 
 @media (max-width: 1030px) {
-
   .main-home {
     padding: 0 0;
     width: 100vw;
@@ -165,7 +164,7 @@
     flex-wrap: wrap;
   }
 
-  .container{
+  .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,7 +173,7 @@
     gap: 45rem;
   }
 
-  .tutorial{
+  .tutorial {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,11 +181,11 @@
     flex-wrap: wrap;
   }
 
-  .imgMovile{
+  .imgMovile {
     width: 270px;
   }
 
-  .blue{
+  .blue {
     width: 100%;
     padding: 0;
   }

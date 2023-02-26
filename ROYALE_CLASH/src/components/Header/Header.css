@@ -7,7 +7,7 @@ header {
 }
 
 .active {
-  color:white;
+  color: white;
 }
 
 header > ul {
@@ -59,18 +59,18 @@ header > ul > li > a:hover::before {
   background-color: #488bf4;
 }
 
-@media(max-width: 644px){
-  header> ul > li > a{
+@media (max-width: 644px) {
+  header > ul > li > a {
     font-size: 1em;
   }
-  header> ul{
+  header > ul {
     font-size: 0.5em;
     gap: 0.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  header{
+  header {
     width: 100vw;
     padding: 20px;
     gap: 1rem;
