@@ -1,9 +1,10 @@
 import './Deck.css';
 
 import axios from 'axios';
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
+
 import { UserContext } from '../../context/UserContext';
 import useDebounce from '../../hook/useDebonced';
 import MainGallery from '../../layouts/MainGallery';
@@ -50,6 +51,7 @@ const Deck = () => {
       padding: '0rem',
       color: '#000000',
       background: '#fff',
+      confirmButtonText: 'Genial, ¡toma mi tarjeta!',
       backdrop: `
         rgba(0,0,123,0.4)
         url("https://res.cloudinary.com/dqkcdzt1m/image/upload/v1677344711/kingreduced_l5w3yi.gif")

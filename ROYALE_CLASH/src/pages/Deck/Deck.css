@@ -7,11 +7,11 @@
   gap: 5rem;
 }
 
- .active {
-  color:white;
+.active {
+  color: white;
 }
 .extra {
-  background-color:var(--primary-yellow-orange);
+  background-color: var(--primary-yellow-orange);
 }
 
 .all-decks > button {
@@ -20,8 +20,6 @@
   width: 150px;
   border-radius: 12px;
 }
-
-
 
 .all-cards {
   width: 100%;
@@ -33,7 +31,7 @@
   object-fit: cover;
   background-size: 100%;
   width: 100%;
- 
+
   display: flex;
   justify-content: center;
   align-items: center;

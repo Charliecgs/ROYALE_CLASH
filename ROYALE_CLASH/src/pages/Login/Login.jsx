@@ -209,7 +209,12 @@ const Login = () => {
                     title: '¡Logueado con éxito!',
                   });
                 } else {
-                  return alert('Introduce Usuario y Contraseña por favor !!');
+                  return Swal.fire({
+                    icon: 'error',
+                    title: '¡Error!',
+                    text: 'Por favor, introduzca usuario y contraseña válidos',
+                    confirmButtonText: 'Vale',
+                  });
                 }
               }}
             >
