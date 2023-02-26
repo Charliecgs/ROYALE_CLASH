@@ -201,15 +201,20 @@ const Login = () => {
                 if (inputRef.current.value !== '' && passRef.current.value !== '') {
                   setUser(inputRef.current.value);
                   setPass(passRef.current.value);
-                  localStorage.setItem('user', user);
-                  localStorage.setItem('pass', pass);
+                  localStorage.setItem('user', inputRef.current.value);
+                  localStorage.setItem('pass', passRef.current.value);
                   navigate('/');
                   Toast.fire({
                     icon: 'success',
                     title: '¡Logueado con éxito!',
                   });
                 } else {
-                  return alert('Introduce Usuario y Contraseña por favor !!');
+                  return Swal.fire({
+                    icon: 'error',
+                    title: '¡Error!',
+                    text: 'Por favor, introduzca usuario y contraseña válidos',
+                    confirmButtonText: 'Vale',
+                  });
                 }
               }}
             >

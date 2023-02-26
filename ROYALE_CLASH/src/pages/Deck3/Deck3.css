@@ -11,12 +11,7 @@
   border: solid black 2px;
   padding: 20px;
   width: 150px;
-  background-color: var(--light-blue);
   border-radius: 12px;
-}
-
-#buttonThree {
-  background-color: var(--primray-red);
 }
 
 .all-cards {
@@ -35,6 +30,9 @@
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+}
+.extra {
+  background-color: var(--primary-yellow-orange);
 }
 
 .btn {
