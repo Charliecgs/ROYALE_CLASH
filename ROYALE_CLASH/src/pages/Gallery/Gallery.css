@@ -37,3 +37,10 @@
 .cl-input > input::placeholder {
   color: white;
 }
+
+
+@media (max-width: 644px) {
+  main{
+    width: 100vw;
+  }
+}

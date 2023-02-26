@@ -10,6 +10,17 @@
   background-color:var(--primary-yellow-orange);
 }
 
+#blackpintar{
+  color: black;
+}
+
+.active {
+  color:white;
+}
+
+.mazofinal > a{
+  color: white;
+}
 
 .all-decks > a > button {
   border: solid black 2px;
