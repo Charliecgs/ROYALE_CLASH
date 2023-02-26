@@ -152,3 +152,42 @@
     transform: translate3d(0, 0, 0) translateZ(0);
   }
 }
+
+@media (max-width: 644px) {
+
+  .main-home {
+    padding: 0 0;
+    width: 100vw;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 45rem;
+  }
+
+  .tutorial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .imgMovile{
+    width: 270px;
+  }
+
+  .blue{
+    width: 100%;
+    padding: 0;
+  }
+}

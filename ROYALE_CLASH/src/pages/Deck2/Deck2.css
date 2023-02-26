@@ -17,6 +17,18 @@
   border-radius: 12px;
 }
 
+#blackpintar{
+  color: black;
+}
+
+.active {
+  color:white;
+}
+
+.mazofinal > a{
+  color: white;
+}
+
 .all-cards {
   width: 100%;
   margin-bottom: 2rem;
