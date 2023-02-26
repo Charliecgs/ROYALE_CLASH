@@ -9,12 +9,15 @@
   width: 400px;
   border-radius: 5%;
   background-color: var(--primary-color);
- 
 }
 .main-review {
   display: flex;
   justify-content: center;
-
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .inputreview {
   height: 300px;
@@ -22,18 +25,16 @@
   overflow: scroll;
 }
 .listacomentarios {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column-reverse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
   gap: 2rem;
   padding: 1rem;
 }
-.filaval{
-    display: flex;
-        justify-content: center;
-        align-items: center;
-       gap: 0 1.5rem;
+.filaval {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1.5rem;
 }
-
-

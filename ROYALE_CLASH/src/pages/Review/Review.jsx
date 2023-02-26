@@ -1,8 +1,9 @@
 import './Review.css';
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import GetReviews from '../../components/getReviews/getReviews';
 import { UserContext } from '../../context/UserContext';
 

@@ -1,5 +1,6 @@
-import React from 'react';
 import './getReviews.css';
+
+import React from 'react';
 const GetReviews = ({ review }) => {
   return (
     <figure className="listaitem">
