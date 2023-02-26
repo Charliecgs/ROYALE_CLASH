@@ -59,7 +59,20 @@ const Review = () => {
   const navigate = useNavigate();
   return (
     <main className="main-review">
-      <div className="formularioReview">
+      <div
+        className="formularioReview"
+        style={
+          localStorage.getItem('theme') == 'header-dark'
+            ? {
+                backgroundColor: '#dc563f',
+                color: 'white',
+              }
+            : {
+                backgroundColor: '#488bf4',
+                color: 'white',
+              }
+        }
+      >
         <h1>Hola {user}</h1>
         <h1>Dejanos tu comentario!!!</h1>
         <input
