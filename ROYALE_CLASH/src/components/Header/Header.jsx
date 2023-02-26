@@ -26,7 +26,6 @@ const Header = () => {
         />
       </NavLink>
       <ul>
-        <li>{user == null && <NavLink to="/login">Login</NavLink>}</li>
         <li>
           <NavLink to="/gallery">CARTAS</NavLink>{' '}
         </li>{' '}
@@ -65,7 +64,6 @@ const Header = () => {
         />
       </NavLink>
       <ul>
-        <li>{user == null && <NavLink to="/login">Login</NavLink>}</li>
         <li>
           <NavLink to="/gallery">CARTAS</NavLink>{' '}
         </li>{' '}

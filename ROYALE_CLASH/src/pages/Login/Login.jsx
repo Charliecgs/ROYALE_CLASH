@@ -1,7 +1,8 @@
 import './Login.css';
-import Swal from 'sweetalert2';
+
 import { useContext, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 import { UserContext } from '../../context/UserContext';
 
@@ -23,23 +24,179 @@ const Login = () => {
   const inputRef = useRef(null);
   const passRef = useRef(null);
   const navigate = useNavigate();
+  const { toggleTheme } = useContext(UserContext);
   return (
     <main>
       <div className="container">
-        <div className="box">
-          <div className="form">
-            <h2>LOGIN</h2>
-            <div className="inputBox">
-              <input type="text" ref={inputRef} required="required" />
-              <span>Username</span>
-              <i></i>
+        <div
+          className="box"
+          style={
+            localStorage.getItem('theme') == 'header-dark'
+              ? {
+                  backgroundColor: '#dc563f',
+                  color: '#488bf4',
+                }
+              : {
+                  backgroundColor: '#488bf4',
+                  color: '#dc563f',
+                }
+          }
+        >
+          <div
+            className="form"
+            style={
+              localStorage.getItem('theme') == 'header-dark'
+                ? {
+                    backgroundColor: '#dc563f',
+                    color: '#488bf4',
+                  }
+                : {
+                    backgroundColor: '#488bf4',
+                    color: '#dc563f',
+                  }
+            }
+          >
+            <h2
+              style={
+                localStorage.getItem('theme') == 'header-dark'
+                  ? {
+                      backgroundColor: '#dc563f',
+                      color: 'white',
+                    }
+                  : {
+                      backgroundColor: '#488bf4',
+                      color: 'white',
+                    }
+              }
+            >
+              LOGIN
+            </h2>
+            <div
+              className="inputBox"
+              style={
+                localStorage.getItem('theme') == 'header-dark'
+                  ? {
+                      backgroundColor: '#dc563f',
+                      color: 'white',
+                    }
+                  : {
+                      backgroundColor: '#488bf4',
+                      color: 'white',
+                    }
+              }
+            >
+              <input
+                type="text"
+                ref={inputRef}
+                required="required"
+                style={
+                  localStorage.getItem('theme') == 'header-dark'
+                    ? {
+                        color: 'white',
+                      }
+                    : {
+                        color: 'white',
+                      }
+                }
+              />
+              <span
+                style={
+                  localStorage.getItem('theme') == 'header-dark'
+                    ? {
+                        backgroundColor: '#dc563f',
+                        color: 'white',
+                      }
+                    : {
+                        backgroundColor: '#488bf4',
+                        color: 'white',
+                      }
+                }
+              >
+                Username
+              </span>
+              <i
+                style={
+                  localStorage.getItem('theme') == 'header-dark'
+                    ? {
+                        backgroundColor: '#488bf4',
+                        color: 'white',
+                      }
+                    : {
+                        backgroundColor: '#dc563f',
+                        color: 'white',
+                      }
+                }
+              ></i>
             </div>
-            <div className="inputBox">
-              <input type="password" ref={passRef} required="required" />
-              <span>Password</span>
-              <i></i>
+            <div
+              className="inputBox"
+              style={
+                localStorage.getItem('theme') == 'header-dark'
+                  ? {
+                      backgroundColor: '#dc563f',
+                      color: 'white',
+                    }
+                  : {
+                      backgroundColor: '#488bf4',
+                      color: 'white',
+                    }
+              }
+            >
+              <input
+                type="password"
+                ref={passRef}
+                required="required"
+                style={
+                  localStorage.getItem('theme') == 'header-dark'
+                    ? {
+                        color: 'white',
+                      }
+                    : {
+                        color: 'white',
+                      }
+                }
+              />
+              <span
+                style={
+                  localStorage.getItem('theme') == 'header-dark'
+                    ? {
+                        backgroundColor: '#dc563f',
+                        color: 'white',
+                      }
+                    : {
+                        backgroundColor: '#488bf4',
+                        color: 'white',
+                      }
+                }
+              >
+                Password
+              </span>
+              <i
+                style={
+                  localStorage.getItem('theme') == 'header-dark'
+                    ? {
+                        backgroundColor: '#488bf4',
+                        color: '#488bf4',
+                      }
+                    : {
+                        backgroundColor: '#dc563f',
+                        color: '#dc563f',
+                      }
+                }
+              ></i>
             </div>
             <button
+              style={
+                localStorage.getItem('theme') == 'header-dark'
+                  ? {
+                      backgroundColor: '#488bf4',
+                      color: 'white',
+                    }
+                  : {
+                      backgroundColor: '#dc563f',
+                      color: 'white',
+                    }
+              }
               onClick={() => {
                 if (inputRef.current.value !== '' && passRef.current.value !== '') {
                   setUser(inputRef.current.value);

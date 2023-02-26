@@ -48,10 +48,9 @@
 }
 
 .btn:hover {
-  color:var(--primray-red);
-  scale:1.1;
+  color: var(--primray-red);
+  scale: 1.1;
 }
-
 
 .btn1 {
   border: 2px solid black;
@@ -60,8 +59,8 @@
 }
 
 .btn1:hover {
-  color:var(--primray-red);
-  scale:1.1;
+  color: var(--primray-red);
+  scale: 1.1;
 }
 
 .cr-figureDeck {
