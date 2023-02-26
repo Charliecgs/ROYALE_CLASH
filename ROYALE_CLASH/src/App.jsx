@@ -7,10 +7,13 @@ import Header from './components/Header/Header';
 import ProtectedRoutes from './components/ProtectedRoutes/ProtectedRoutes';
 import BaseLayout from './layouts/BaseLayout';
 import Deck from './pages/Deck/Deck';
+import Deck2 from './pages/Deck2/Deck2';
+import Deck3 from './pages/Deck3/Deck3';
 import Gallery from './pages/Gallery/Gallery';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Review from './pages/Review/Review';
+
 function App() {
   return (
     <BaseLayout>
@@ -18,6 +21,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/deck2" element={<Deck2 />} />
+        <Route path="/deck3" element={<Deck3 />} />
         <Route
           path="/gallery"
           element={

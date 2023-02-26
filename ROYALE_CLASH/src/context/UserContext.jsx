@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 //1º CREAR CONTEXTO
@@ -15,6 +15,22 @@ export const UserContextProvider = ({ children }) => {
       return null;
     }
   });
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'header-dark');
+
+  const toggleTheme = () => {
+    if (theme === 'header-dark') {
+      setTheme('header-light');
+      localStorage.setItem('theme', 'header-light');
+    } else {
+      setTheme('header-dark');
+      localStorage.setItem('theme', 'header-dark');
+    }
+  };
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
   const [pass, setPass] = useState(() => {
     if (localStorage.getItem('pass')) {
       return localStorage.getItem('pass');
@@ -27,14 +43,13 @@ export const UserContextProvider = ({ children }) => {
     localStorage.removeItem('user');
     localStorage.removeItem('pass');
     setUser(null);
-    setPass(null);
     navigate('/');
   };
 
   //3º RETORNAR LA ETIQUETA WRAPEADORA CON LOS VALUE A COMPARTIR EN LA APLICACION
   return (
     <UserContext.Provider
-      value={{ user, setUser, logout, pass, setPass, clash, setClash }}
+      value={{ user, setUser, logout, pass, setPass, clash, setClash, toggleTheme }}
     >
       {children}
     </UserContext.Provider>

@@ -7,10 +7,6 @@
   gap: 5rem;
 }
 
-#buttonOne {
-  background-color: var(--primray-red);
-}
-
 .all-decks > button {
   border: solid black 2px;
   padding: 20px;
@@ -19,8 +15,8 @@
   border-radius: 12px;
 }
 
-.button1 {
-  background-color: red;
+#buttonThree {
+  background-color: var(--primray-red);
 }
 
 .all-cards {
@@ -47,20 +43,10 @@
   padding: 7px;
 }
 
-.btn:hover {
-  color: var(--primray-red);
-  scale: 1.1;
-}
-
 .btn1 {
   border: 2px solid black;
   border-radius: 8px;
   padding: 1px;
-}
-
-.btn1:hover {
-  color: var(--primray-red);
-  scale: 1.1;
 }
 
 .cr-figureDeck {

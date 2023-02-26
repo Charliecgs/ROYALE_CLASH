@@ -1,29 +1,26 @@
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #488bf4;
+  color: inherit;
 }
 
 header > ul {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
 }
 
-a {
+header > ul > li > a {
   position: relative;
-  color: #000;
+  color: black;
   text-decoration: none;
 }
 
-a:hover {
-  color: #000;
-}
-
-a::before {
+header > ul > li > a::before {
   content: '';
   position: absolute;
   display: block;
@@ -31,20 +28,29 @@ a::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: black;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
 
-a:hover::before {
+header > ul > li > a:hover::before {
   transform: scaleX(1);
 }
 
 .imgLogo {
-  height: 100%;
+  width: 60px;
+  border-radius: 9px;
 }
 
 .imgBanner {
   height: 100%;
   width: 160px;
+}
+
+.header-dark {
+  background-color: var(--primray-red);
+}
+
+.header-light {
+  background-color: #488bf4;
 }

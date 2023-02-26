@@ -1,11 +1,21 @@
 import './Footer.css';
 
+import { useContext } from 'react';
 import React from 'react';
 
+import { UserContext } from '../../context/UserContext';
+
 const Footer = () => {
+  const { toggleTheme } = useContext(UserContext);
   return (
-    <footer>
-      <div className="bgcolor">
+    <footer className="white">
+      <div
+        style={
+          localStorage.getItem('theme') == 'header-dark'
+            ? { backgroundColor: '#dc563f' }
+            : { backgroundColor: '#488bf4' }
+        }
+      >
         <div className="max-w-2xl mx-auto text-white py-10">
           <div className="text-center">
             <h3 className="text-3xl mb-3 "> Descarga Clash Royale </h3>
