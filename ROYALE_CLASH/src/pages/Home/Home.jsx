@@ -3,20 +3,23 @@ import './Home.css';
 import { useContext } from 'react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { FormattedMessage } from 'react-intl';
 import { UserContext } from '../../context/UserContext';
-
+import SelectLanguages from '../../components/SelectLamnguages/SelectLanguages';
 const Home = () => {
   const navigate = useNavigate();
   const { toggleTheme } = useContext(UserContext);
   return (
     <main className="main-home">
+      <SelectLanguages />
       <div className="container">
         <div className="red">
           <div className="description">
-            <h1 className="borderWhite text-xl">¡CREA TU PROPIO MAZO DE CLASH ROYALE!</h1>
+            <h1 className="borderWhite text-xl">
+              <FormattedMessage id="home.content" />
+            </h1>
             <p className="borderWhite">
-              ¡PUNTUA Y COMPARTE CON TUS AMIGOS LOS MEJORES MAZOS!
+              <FormattedMessage id="home.1" />
             </p>
             <button
               className="bn54"
@@ -35,7 +38,9 @@ const Home = () => {
                     }
               }
             >
-              <span className="bn54span">CREA TU MAZO</span>{' '}
+              <span className="bn54span">
+                <FormattedMessage id="home.2" />
+              </span>{' '}
             </button>
           </div>
 
@@ -46,7 +51,7 @@ const Home = () => {
                 alt="tutorial 1"
               />
               <p className="borderWhite">
-                Paso 1: Pulsar crear mazo para ir a creaciones
+                <FormattedMessage id="home.3" />
               </p>
             </div>
             <div className="tutorial1">
@@ -55,7 +60,7 @@ const Home = () => {
                 alt="tutorial 1"
               />
               <p className="borderWhite">
-                Paso 2: Seleccionar las cartas que quieras para tu mazo
+                <FormattedMessage id="home.4" />
               </p>
             </div>
             <div className="tutorial1">
@@ -64,7 +69,7 @@ const Home = () => {
                 alt="tutorial 1"
               />
               <p className="borderWhite">
-                Paso 3: Guardar y seguir creando mazos para competir{' '}
+                <FormattedMessage id="home.5" />
               </p>
             </div>
           </div>

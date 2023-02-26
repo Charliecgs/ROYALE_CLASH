@@ -1,6 +1,6 @@
 import './index.css';
 import './assets/fonts/SVN-Supercell Magic.otf';
-
+import { ProviderLanguage } from './context/LanguagesContext';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
@@ -12,7 +12,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <UserContextProvider>
-        <App />
+        <ProviderLanguage>
+          <App />
+        </ProviderLanguage>
       </UserContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
