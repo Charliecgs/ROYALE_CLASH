@@ -9,11 +9,12 @@
   width: 400px;
   border-radius: 5%;
   background-color: var(--primary-color);
-  padding-top: 2rems;
+  margin-top: 2rem;
 }
 .main-review {
   display: flex;
   justify-content: center;
+  
 }
 .inputreview {
   height: 300px;
