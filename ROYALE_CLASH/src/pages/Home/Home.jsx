@@ -2,8 +2,10 @@ import './Home.css';
 
 import { useContext } from 'react';
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { useNavigate } from 'react-router-dom';
 
+import SelectLanguages from '../../components/SelectLanguages/SelectLanguages';
 import { UserContext } from '../../context/UserContext';
 
 const Home = () => {
@@ -11,15 +13,19 @@ const Home = () => {
   const { toggleTheme } = useContext(UserContext);
   return (
     <main className="main-home">
+      <SelectLanguages />
       <div className="container">
         <div className="red">
           <div className="description">
-            <h1 className="borderWhite text-xl">¡CREA TU PROPIO MAZO DE CLASH ROYALE!</h1>
+            <h1 className="borderWhite text-xl">
+              {' '}
+              <FormattedMessage id="home.1" />
+            </h1>
             <p className="borderWhite">
-              ¡PUNTUA Y COMPARTE CON TUS AMIGOS LOS MEJORES MAZOS!
+              <FormattedMessage id="home.2" />
             </p>
             <button
-              className="bg-indigo-500 border border-indigo-700 hover:bg-indigo-400 text-white font-bold py-3 px-6 border-b-4 border-blue-900 hover:border-indigo-500 rounded button123"
+              className="bn54"
               onClick={() => navigate('/deck')}
               style={
                 localStorage.getItem('theme') == 'header-dark'
@@ -35,37 +41,39 @@ const Home = () => {
                     }
               }
             >
-              {' '}
-              CREA TU MAZO{' '}
+              <span className="bn54span">
+                {' '}
+                <FormattedMessage id="home.3" />
+              </span>{' '}
             </button>
           </div>
 
           <div className="tutorial">
             <div className="tutorial1">
               <img
-                src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677246882/ClashRoyale/Mazos_czajbv.jpg"
+                src="https://res.cloudinary.com/dqkcdzt1m/image/upload/v1677426333/lava-loon-deck_d8j4m4.webp"
                 alt="tutorial 1"
               />
               <p className="borderWhite">
-                Paso 1: Pulsar crear mazo para ir a creaciones
+                <FormattedMessage id="home.4" />
               </p>
             </div>
             <div className="tutorial1">
               <img
-                src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677246882/ClashRoyale/Mazos_czajbv.jpg"
+                src="https://res.cloudinary.com/dqkcdzt1m/image/upload/v1677427636/decklist_ae4dm0.jpg"
                 alt="tutorial 1"
               />
               <p className="borderWhite">
-                Paso 2: Seleccionar las cartas que quieras para tu mazo
+                <FormattedMessage id="home.5" />
               </p>
             </div>
             <div className="tutorial1">
               <img
-                src="https://res.cloudinary.com/dqoiir5ii/image/upload/v1677246882/ClashRoyale/Mazos_czajbv.jpg"
+                src="https://res.cloudinary.com/dqkcdzt1m/image/upload/v1677426332/the-best-clash-royale-deck_uq55ow.webp"
                 alt="tutorial 1"
               />
               <p className="borderWhite">
-                Paso 3: Guardar y seguir creando mazos para competir{' '}
+                <FormattedMessage id="home.6" />
               </p>
             </div>
           </div>

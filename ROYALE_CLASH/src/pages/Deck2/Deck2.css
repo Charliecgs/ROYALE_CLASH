@@ -6,17 +6,27 @@
   align-items: center;
   gap: 5rem;
 }
-
-#buttonTwo {
-  background-color: var(--primray-red);
+.extra {
+  background-color: var(--primary-yellow-orange);
 }
 
 .all-decks > a > button {
   border: solid black 2px;
   padding: 20px;
   width: 150px;
-  background-color: var(--light-blue);
   border-radius: 12px;
+}
+
+#blackpintar {
+  color: black;
+}
+
+.active {
+  color: white;
+}
+
+.mazofinal > a {
+  color: white;
 }
 
 .all-cards {
