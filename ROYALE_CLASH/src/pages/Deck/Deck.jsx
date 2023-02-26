@@ -1,4 +1,5 @@
 import './Deck.css';
+import "../../components/Header/Header.css";
 
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
@@ -72,8 +73,6 @@ const Deck = () => {
         <div className="all-decks">
           <NavLink to={'/deck'} className="deck10">
             <button
-              id="buttonOne"
-              className="button1 bg-red-500"
               style={
                 localStorage.getItem('theme') == 'header-dark'
                   ? { backgroundColor: '#dc563f' }
@@ -83,7 +82,7 @@ const Deck = () => {
               Mazo 1
             </button>
           </NavLink>
-          <NavLink to={'/deck2'}>
+          <NavLink to={'/deck/deck2'} className="deck10 headermazo2">
             <button
               style={
                 localStorage.getItem('theme') == 'header-dark'
@@ -94,7 +93,7 @@ const Deck = () => {
               Mazo 2
             </button>
           </NavLink>
-          <NavLink to={'/deck3'}>
+          <NavLink to={'/deck/deck3'} className="deck10">
             <button
               style={
                 localStorage.getItem('theme') == 'header-dark'

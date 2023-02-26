@@ -1,4 +1,5 @@
 import './Header.css';
+import "../../pages/Deck2/Deck2.css";
 
 import React from 'react';
 import { useContext } from 'react';
@@ -67,7 +68,7 @@ const Header = () => {
         <li>
           <NavLink to="/gallery">CARTAS</NavLink>{' '}
         </li>{' '}
-        <li>
+        <li className='headerMazos'>
           <NavLink to="/deck">MAZOS</NavLink>{' '}
         </li>
         <li>

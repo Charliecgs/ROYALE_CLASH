@@ -74,6 +74,7 @@ const Deck3 = () => {
         <div className="all-decks">
           <NavLink to={'/deck'}>
             <button
+              id="blackpintar"
               style={
                 localStorage.getItem('theme') == 'header-dark'
                   ? { backgroundColor: '#dc563f' }
@@ -83,7 +84,7 @@ const Deck3 = () => {
               Mazo 1
             </button>
           </NavLink>
-          <NavLink to={'/deck2'}>
+          <NavLink to={'/deck/deck2'}>
             <button
               style={
                 localStorage.getItem('theme') == 'header-dark'
@@ -94,7 +95,7 @@ const Deck3 = () => {
               Mazo 2
             </button>
           </NavLink>
-          <NavLink to={'/deck3'}>
+          <NavLink to={'/deck/deck3'}>
             <button
               id="buttonThree"
               style={

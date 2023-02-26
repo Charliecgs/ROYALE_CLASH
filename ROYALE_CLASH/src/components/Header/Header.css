@@ -6,6 +6,10 @@ header {
   color: inherit;
 }
 
+.active {
+  color:white;
+}
+
 header > ul {
   display: flex;
   gap: 2rem;
@@ -53,4 +57,22 @@ header > ul > li > a:hover::before {
 
 .header-light {
   background-color: #488bf4;
+}
+
+@media(max-width: 644px){
+  header> ul > li > a{
+    font-size: 1em;
+  }
+  header> ul{
+    font-size: 0.5em;
+    gap: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header{
+    width: 100vw;
+    padding: 20px;
+    gap: 1rem;
+  }
 }

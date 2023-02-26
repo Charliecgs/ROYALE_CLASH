@@ -31,7 +31,6 @@
   object-fit: cover;
   background-size: 100%;
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,4 +77,54 @@
   font-size: 14px;
   text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
   border: solid var(--light-blue) 2px;
+}
+
+
+@media(max-width: 820px){
+
+  main{
+    width: 100vw;
+  }
+
+  .deck-container{
+    width: 100vw;
+  }
+
+  .all-decks {
+    width: 100vw;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 50px;
+    margin-bottom: 100px;
+  }
+
+  .all-decks > a {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    font-size: 10px;
+  }
+
+  .all-decks > button {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 10px;
+  }
+
+  .decks{
+    min-height: 1400px;
+  }
 }
