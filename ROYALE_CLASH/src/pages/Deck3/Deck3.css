@@ -22,8 +22,6 @@
   border-radius: 12px;
 }
 
-
-
 .all-cards {
   width: 100%;
   margin-bottom: 2rem;
@@ -42,9 +40,8 @@
   flex-wrap: wrap;
 }
 .extra {
-  background-color:var(--primary-yellow-orange);
+  background-color: var(--primary-yellow-orange);
 }
-
 
 .btn {
   border: 2px solid black;
