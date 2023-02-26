@@ -201,8 +201,8 @@ const Login = () => {
                 if (inputRef.current.value !== '' && passRef.current.value !== '') {
                   setUser(inputRef.current.value);
                   setPass(passRef.current.value);
-                  localStorage.setItem('user', user);
-                  localStorage.setItem('pass', pass);
+                  localStorage.setItem('user', inputRef.current.value);
+                  localStorage.setItem('pass', passRef.current.value);
                   navigate('/');
                   Toast.fire({
                     icon: 'success',

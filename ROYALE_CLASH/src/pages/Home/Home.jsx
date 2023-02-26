@@ -19,7 +19,7 @@ const Home = () => {
               ¡PUNTUA Y COMPARTE CON TUS AMIGOS LOS MEJORES MAZOS!
             </p>
             <button
-              className="bg-indigo-500 border border-indigo-700 hover:bg-indigo-400 text-white font-bold py-3 px-6 border-b-4 border-blue-900 hover:border-indigo-500 rounded button123"
+              className="bn54"
               onClick={() => navigate('/deck')}
               style={
                 localStorage.getItem('theme') == 'header-dark'
@@ -35,8 +35,7 @@ const Home = () => {
                     }
               }
             >
-              {' '}
-              CREA TU MAZO{' '}
+              <span className="bn54span">CREA TU MAZO</span>{' '}
             </button>
           </div>
 
