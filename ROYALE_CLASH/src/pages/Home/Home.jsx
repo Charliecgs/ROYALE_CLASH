@@ -1,10 +1,14 @@
 import './Home.css';
 
+import { useContext } from 'react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { UserContext } from '../../context/UserContext';
+
 const Home = () => {
   const navigate = useNavigate();
+  const { toggleTheme } = useContext(UserContext);
   return (
     <main className="main-home">
       <div className="container">
@@ -15,8 +19,21 @@ const Home = () => {
               ¡PUNTUA Y COMPARTE CON TUS AMIGOS LOS MEJORES MAZOS!
             </p>
             <button
-              className="bg-indigo-500 border border-indigo-700 hover:bg-indigo-400 text-white font-bold py-3 px-6 border-b-4 border-blue-900 hover:border-indigo-500 rounded"
+              className="bg-indigo-500 border border-indigo-700 hover:bg-indigo-400 text-white font-bold py-3 px-6 border-b-4 border-blue-900 hover:border-indigo-500 rounded button123"
               onClick={() => navigate('/deck')}
+              style={
+                localStorage.getItem('theme') == 'header-dark'
+                  ? {
+                      backgroundColor: '#dc563f',
+                      border: 'solid red 3px',
+                      color: 'white',
+                    }
+                  : {
+                      backgroundColor: '#488bf4',
+                      border: 'solid blue 3px',
+                      color: 'white',
+                    }
+              }
             >
               {' '}
               CREA TU MAZO{' '}
