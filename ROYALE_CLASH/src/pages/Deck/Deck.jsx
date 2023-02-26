@@ -1,10 +1,10 @@
 import './Deck.css';
 
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
-
+import { UserContext } from '../../context/UserContext';
 import useDebounce from '../../hook/useDebonced';
 import MainGallery from '../../layouts/MainGallery';
 
@@ -14,6 +14,7 @@ const Deck = () => {
   const [loaded, setLoaded] = useState(false);
   const [loaded2, setLoaded2] = useState(false);
   const [deck, setDeck] = useState([]);
+  const { toggleTheme } = useContext(UserContext);
 
   const debouncedValue = useDebounce(filterClash, 1000);
 
@@ -67,18 +68,44 @@ const Deck = () => {
     <main>
       <div className="deck-container>">
         <div className="all-decks">
-          <NavLink to={'/deck'} className="deck1">
-            <button id="buttonOne" className="button1 bg-red-500">
+          <NavLink to={'/deck'} className="deck10">
+            <button
+              id="buttonOne"
+              className="button1 bg-red-500"
+              style={
+                localStorage.getItem('theme') == 'header-dark'
+                  ? { backgroundColor: '#dc563f' }
+                  : { backgroundColor: '#488bf4' }
+              }
+            >
               Mazo 1
             </button>
           </NavLink>
           <NavLink to={'/deck2'}>
-            <button>Mazo 2</button>
+            <button
+              style={
+                localStorage.getItem('theme') == 'header-dark'
+                  ? { backgroundColor: '#dc563f' }
+                  : { backgroundColor: '#488bf4' }
+              }
+            >
+              Mazo 2
+            </button>
           </NavLink>
           <NavLink to={'/deck3'}>
-            <button>Mazo 3</button>
+            <button
+              style={
+                localStorage.getItem('theme') == 'header-dark'
+                  ? { backgroundColor: '#dc563f' }
+                  : { backgroundColor: '#488bf4' }
+              }
+            >
+              Mazo 3
+            </button>
           </NavLink>
-          <button onClick={upgrade}>¡Mazos extra!</button>
+          <button className="extra" onClick={upgrade}>
+            ¡Mazos extra!
+          </button>
         </div>
         <div className="decks">
           {loaded2 ? (

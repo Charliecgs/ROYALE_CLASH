@@ -7,21 +7,21 @@
   gap: 5rem;
 }
 
-#buttonOne {
-  background-color: var(--primray-red);
+ .active {
+  color:white;
+}
+.extra {
+  background-color:var(--primary-yellow-orange);
 }
 
 .all-decks > button {
   border: solid black 2px;
   padding: 20px;
   width: 150px;
-  background-color: var(--light-blue);
   border-radius: 12px;
 }
 
-.button1 {
-  background-color: red;
-}
+
 
 .all-cards {
   width: 100%;
@@ -33,7 +33,7 @@
   object-fit: cover;
   background-size: 100%;
   width: 100%;
-  height: 400px;
+ 
   display: flex;
   justify-content: center;
   align-items: center;
