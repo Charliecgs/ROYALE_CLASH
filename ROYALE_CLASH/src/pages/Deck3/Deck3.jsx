@@ -49,6 +49,7 @@ const Deck3 = () => {
       text: 'Suscríbete a RoyaleClash Premium© por solo 9$ al mes, para conseguir: Mazos ilimitados, acceso a mazos ProPlayer +3000 trofeos, ¡y mucho mas! ',
       width: 600,
       padding: '0rem',
+      confirmButtonText: 'Que pasada, ¡me suscribo ya!',
       color: '#000000',
       background: '#fff',
       backdrop: `

@@ -48,6 +48,7 @@ const Deck2 = () => {
       width: 600,
       padding: '0rem',
       color: '#000000',
+      confirmButtonText: 'Que pasada, ¡me suscribo ya!',
       background: '#fff',
       backdrop: `
         rgba(0,0,123,0.4)
