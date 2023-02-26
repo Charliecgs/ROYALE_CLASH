@@ -1,11 +1,23 @@
 import './Login.css';
-
+import Swal from 'sweetalert2';
 import { useContext, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { UserContext } from '../../context/UserContext';
 
 const Login = () => {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer);
+      toast.addEventListener('mouseleave', Swal.resumeTimer);
+    },
+  });
+
   const { user, setUser } = useContext(UserContext);
   const { pass, setPass } = useContext(UserContext);
   const inputRef = useRef(null);
@@ -32,9 +44,13 @@ const Login = () => {
                 if (inputRef.current.value !== '' && passRef.current.value !== '') {
                   setUser(inputRef.current.value);
                   setPass(passRef.current.value);
-                  localStorage.setItem('user', inputRef.current.value);
-                  localStorage.setItem('pass', passRef.current.value);
+                  localStorage.setItem('user', user);
+                  localStorage.setItem('pass', pass);
                   navigate('/');
+                  Toast.fire({
+                    icon: 'success',
+                    title: '¡Logueado con éxito!',
+                  });
                 } else {
                   return alert('Introduce Usuario y Contraseña por favor !!');
                 }
